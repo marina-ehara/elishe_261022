@@ -144,26 +144,26 @@
         
         .falling-title {
             position: absolute;
-            top: 80%; 
+            top: 90%; 
             left: 20px;
             font-family: 'Pinyon Script', cursive;
             font-size: 60px; 
             color: #4a4a4a; 
             z-index: 10;
             opacity: 0;
-            transform: translateY(-50px);
+            transform: translateY(-150px);
             pointer-events: none;
             line-height: 1;
         }
 
         .falling-title.animate {
-            animation: slideDownFade 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+            animation: slideDownFade 2.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
         }
 
         @keyframes slideDownFade {
             0% {
                 opacity: 0;
-                transform: translateY(-50px);
+                transform: translateY(-150px);
             }
             100% {
                 opacity: 1;
