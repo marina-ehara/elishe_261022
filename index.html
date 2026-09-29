@@ -65,24 +65,22 @@
             position: absolute;
             top: 0;
             left: 0;
-            opacity: 0; 
-            transition: opacity 1s ease-in-out; 
-            z-index: 2;
+            opacity: 0; /* 最初は透明 */
+            transition: opacity 2s ease-in-out; /* 2秒かけてゆっくりフェード */
+            z-index: 1;
         }
         .hero-second-img.show {
             opacity: 1; /* クラスが付与されたら表示 */
         }
 
+        /* ＝＝＝ 【修正】テキストのふわっと表示スタイル ＝＝＝ */
         .hero-second-text {
-            position: absolute;
-            top: 0;
-            left: 0;
+            /* absoluteなどは削除し、透明度のアニメーションだけ残します */
             opacity: 0; 
-            transition: opacity 0.5s ease-in-out; 
-            z-index: 2;
+            transition: opacity 1.5s ease-in-out; /* 1.5秒かけて表示 */
         }
         .hero-second-text.show {
-            opacity: 0.5; /* クラスが付与されたら表示 */
+            opacity: 1; /* 0.5だと半透明なので1に修正 */
         }
 
         /* ＝＝＝ ここからスライド（カルーセル）用のスタイル ＝＝＝ */
@@ -216,12 +214,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-        <div class="hero-wrapper">
+            <!-- 余計な div class="hero-wrapper" を外しました -->
             <h2 style="font-family: 'Marcellus', serif; font-size: 20px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;" class="hero-second-text">
                 Éclat d'Hiver</h2>
             <p style="font-family: 'Marcellus', serif; font-size: 10px; color: #666666; line-height: 1.5; letter-spacing: 0.05em; margin: 0;" class="hero-second-text">
             Where winter sparkles meet elegant silhouettes.</p>
-        </div>
         </div>
 
         <!-- 01 -->
@@ -530,17 +527,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <script>
-        // ① トップ画像フェード（ページ読み込み後1.5秒）
+        // ＝＝＝ ここから【ページ表示時のアニメーション】用の処理 ＝＝＝
         window.addEventListener('load', () => {
+            // ① トップ画像のフェードイン（1.5秒後）
             setTimeout(() => {
                 const heroImg = document.querySelector('.hero-second-img');
                 if (heroImg) {
                     heroImg.classList.add('show');
                 }
             }, 1500); 
+
+            // 【追加】② テキスト（Éclat d'Hiver等）のフェードイン（表示タイミング）
+            // お好みで秒数（500 = 0.5秒後）を変更してください
+            setTimeout(() => {
+                document.querySelectorAll('.hero-second-text').forEach(text => {
+                    text.classList.add('show');
+                });
+            }, 1000); // 1秒後にふわっと表示
         });
 
-        // ② テキスト落下（スクロールして「画面に入った瞬間」に発火させる）
+        // ③ テキスト落下（スクロールして「画面に入った瞬間」に発火させる）
         const observerOptions = {
             root: null,
             rootMargin: '0px 0px -100px 0px', 
@@ -550,9 +556,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // スクロールして画面に入ってきたら animate クラスを付与
                     entry.target.classList.add('animate');
-                    observer.unobserve(entry.target); // 一度降ったら監視を終了する
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
