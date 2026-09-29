@@ -161,7 +161,7 @@
         
         .falling-title {
             position: absolute;
-            top: 80%; 
+            top: 90%; 
             left: 20px;
             font-family: 'Pinyon Script', cursive;
             font-size: 50px; 
@@ -517,15 +517,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <script>
-        // ＝＝＝ ここから【トップ画像1回きりフェード】用の処理 ＝＝＝
+        // ＝＝＝ ここから【ページ表示時のアニメーション】用の処理 ＝＝＝
         window.addEventListener('load', () => {
-            // ページ読み込み完了の 1.5秒後 にフェードを実行する
+            // ① トップ画像フェード（1.5秒後）
             setTimeout(() => {
                 const heroImg = document.querySelector('.hero-second-img');
                 if (heroImg) {
                     heroImg.classList.add('show');
                 }
             }, 1500); 
+
+            // ② 「01. Coat」テキストの落下（ページを開いてから0.5秒後）
+            // ※0.5秒の部分（500）はお好みに合わせて調整してください
+            setTimeout(() => {
+                document.querySelectorAll('.falling-title').forEach(title => {
+                    title.classList.add('animate');
+                });
+            }, 500); 
         });
 
         // ＝＝＝ 横スライド（カルーセル）用の処理 ＝＝＝
@@ -696,25 +704,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }, index * 800); 
         });
 
-        // ＝＝＝ ここから【スクロール連動のテキスト落下】用の処理 ＝＝＝
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px 0px -100px 0px', 
-            threshold: 0
-        };
-
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.falling-title').forEach(title => {
-            observer.observe(title);
-        });
     </script>
 </body>
 </html>
