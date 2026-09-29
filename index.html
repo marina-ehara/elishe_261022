@@ -516,23 +516,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <script>
-        // ＝＝＝ ここから【ページ表示時のアニメーション】用の処理 ＝＝＝
+        // ① トップ画像フェード（ページ読み込み後1.5秒）
         window.addEventListener('load', () => {
-            // ① トップ画像フェード（1.5秒後）
             setTimeout(() => {
                 const heroImg = document.querySelector('.hero-second-img');
                 if (heroImg) {
                     heroImg.classList.add('show');
                 }
             }, 1500); 
+        });
 
-            // ② 「01. Coat」テキストの落下（ページを開いてから0.5秒後）
-            // ※0.5秒の部分（500）はお好みに合わせて調整してください
-            setTimeout(() => {
-                document.querySelectorAll('.falling-title').forEach(title => {
-                    title.classList.add('animate');
-                });
-            }, 500); 
+        // ② テキスト落下（スクロールして「画面に入った瞬間」に発火させる）
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -100px 0px', 
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // スクロールして画面に入ってきたら animate クラスを付与
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target); // 一度降ったら監視を終了する
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.falling-title').forEach(title => {
+            observer.observe(title);
         });
 
         // ＝＝＝ 横スライド（カルーセル）用の処理 ＝＝＝
