@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-69WS6B7LGF"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-69WS6B7LGF');
-</script>
-
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-P4GLB94H');</script>
-<!-- End Google Tag Manager -->
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elishe 2026AW COLLECTION</title>
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P4GLB94H');</script>
+    <!-- End Google Tag Manager -->
 
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "yimdsun427");
-</script>
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "yimdsun427");
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
+    <!-- 追加: 筆記体フォント -->
+    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
 
     <style>
         /* ブラウザのデフォルトの余白をリセット */
@@ -64,12 +60,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .carousel-wrapper {
             position: relative;
             width: 100%;
-            padding-bottom: 20px; /* ドットのための余白 */
+            padding-bottom: 30px;
+            margin-bottom: 20px;
             overflow: hidden;
             background-color: #ffffff;
         }
         
-        /* ドットがない場合は下の余白をなくす */
         .carousel-wrapper.no-dots {
             padding-bottom: 0;
         }
@@ -78,7 +74,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             display: flex;
             width: 100%;
             cursor: grab;
-            /* スワイプ操作をスムーズにするための設定 */
             touch-action: pan-y; 
         }
         
@@ -86,7 +81,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             cursor: grabbing;
         }
         
-        /* カルーセル内の画像が縮まないように設定 */
         .carousel-track img {
             min-width: 100%;
             flex-shrink: 0;
@@ -122,6 +116,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             position: relative;
             width: 100%;
             overflow: hidden;
+            margin-bottom: 5px;
         }
         .fade-wrapper img {
             position: absolute;
@@ -129,25 +124,53 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             left: 0;
             width: 100%;
             height: auto;
-            opacity: 0; /* 基本は透明にして見えなくする */
-            transition: opacity 1s ease-in-out; /* 1秒かけてふわっと変化 */
+            opacity: 0; 
+            transition: opacity 1s ease-in-out; 
             z-index: 1;
         }
-        /* 1枚目の画像でブロック全体の高さを確保する */
         .fade-wrapper img:first-child {
             position: relative;
         }
-        /* activeクラスがついた画像だけ表示する */
         .fade-wrapper img.active {
             opacity: 1;
             z-index: 2;
         }
-    </style>
-<!-- Google Fonts の読み込み -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
 
+        /* ＝＝＝ ここから【降ってくるテキスト】用のスタイル ＝＝＝ */
+        .section-container {
+            position: relative;
+            width: 100%;
+        }
+        
+        .falling-title {
+            position: absolute;
+            top: 10%; 
+            left: 20px;
+            font-family: 'Pinyon Script', cursive;
+            font-size: 80px; 
+            color: #33210a; 
+            z-index: 10;
+            opacity: 0;
+            transform: translateY(-50px);
+            pointer-events: none;
+            line-height: 1;
+        }
+
+        .falling-title.animate {
+            animation: slideDownFade 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        @keyframes slideDownFade {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -159,29 +182,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="lp-container">
         <img src="Elishe_LP_261022_01.jpg" alt="Elishe 2026AW COLLECTION vol.01">
         
-<div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-    <h2 style="font-family: 'Marcellus', serif; font-size: 20px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
-        Éclat d'Hiver</h2>
-    <p style="font-family: 'Marcellus', serif; font-size: 10px; color: #666666; line-height: 1.5; letter-spacing: 0.05em; margin: 0;">
-Where winter sparkles meet elegant silhouettes.</p>
-</div>
+        <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
+            <h2 style="font-family: 'Marcellus', serif; font-size: 20px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+                Éclat d'Hiver</h2>
+            <p style="font-family: 'Marcellus', serif; font-size: 10px; color: #666666; line-height: 1.5; letter-spacing: 0.05em; margin: 0;">
+            Where winter sparkles meet elegant silhouettes.</p>
+        </div>
 
- 
-<!-- 01 -->       
-        <div class="fade-wrapper">
+        <!-- 01 -->
+        <div class="section-container">
+            <!-- 降ってくるテキスト -->
+            <div class="falling-title">01. Coat</div>
+            
+            <div class="fade-wrapper">
                 <img src="Elishe_LP_261022_02-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_02-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_02-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_02-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
             </div>
+        </div>
 
-        <div class="fade-wrapper">
-                <img src="Elishe_LP_261022_03-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_03-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_03-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            </div>
-
-<br><br>
+        <div class="fade-wrapper" style="margin-bottom: 40px;">
+            <img src="Elishe_LP_261022_03-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_03-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_03-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+        </div>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
@@ -189,43 +214,36 @@ Where winter sparkles meet elegant silhouettes.</p>
                 <img src="Elishe_LP_261022_04-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_04-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
             </div>
-<br>
             <div class="carousel-dots"></div>
-<br>
         </div>
 
-<br>
+        <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
+            <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+                2way Standcollar Coat</h2>
+            <!-- FIXME: 全アイテムの説明文がロングスカートになっています。公開前に適切な文章へ変更してください。 -->
+            <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
+                black / brown / orange / gray <br>
+                ￥12,100 (tax in)<br><br>
+                ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
+                立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
+                360度どこから見ても表情のあるデザインに仕上げました。<br>
+                程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
+        </div>
 
-<div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-    <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
-        2way Standcollar Coat</h2>
-    <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
-        black / brown / orange / gray <br>
-        ￥12,100 (tax in)<br><br>
-        ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
-        立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
-        360度どこから見ても表情のあるデザインに仕上げました。<br>
-        程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
-</div>
-
-<!-- 01 -->  
-
-<!-- 02 -->       
+        <!-- 02 -->
         <div class="fade-wrapper">
-                <img src="Elishe_LP_261022_05-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_05-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_05-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_05-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            </div>
+            <img src="Elishe_LP_261022_05-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_05-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_05-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_05-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+        </div>
 
-        <div class="fade-wrapper">
-                <img src="Elishe_LP_261022_06-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_06-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_06-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_06-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            </div>
-
-<br><br>
+        <div class="fade-wrapper" style="margin-bottom: 40px;">
+            <img src="Elishe_LP_261022_06-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_06-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_06-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_06-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+        </div>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
@@ -234,76 +252,60 @@ Where winter sparkles meet elegant silhouettes.</p>
                 <img src="Elishe_LP_261022_07-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_07-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
             </div>
-<br>
             <div class="carousel-dots"></div>
-<br>
         </div>
 
-<br>
+        <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
+            <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+                Flowertulle Peplum Knittops</h2>
+            <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
+                ivory / black / lavender / pink <br>
+                ￥5,940 (tax in)<br><br>
+                ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
+                立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
+                360度どこから見ても表情のあるデザインに仕上げました。<br>
+                程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
+        </div>
 
-<div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-    <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
-        Flowertulle Peplum Knittops</h2>
-    <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
-        ivory / black / lavender / pink <br>
-        ￥5,940 (tax in)<br><br>
-        ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
-        立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
-        360度どこから見ても表情のあるデザインに仕上げました。<br>
-        程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
-</div>
-
-<!-- 02 -->  
-
-<!-- 03 -->       
+        <!-- 03 -->
         <div class="fade-wrapper">
-                <img src="Elishe_LP_261022_08-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_08-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_08-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            </div>
+            <img src="Elishe_LP_261022_08-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_08-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_08-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+        </div>
 
-        <div class="fade-wrapper">
-                <img src="Elishe_LP_261022_09-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_09-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_09-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            </div>
-
-<br><br>
+        <div class="fade-wrapper" style="margin-bottom: 40px;">
+            <img src="Elishe_LP_261022_09-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_09-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_09-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+        </div>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
                 <img src="Elishe_LP_261022_10-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_10-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
             </div>
-<br>
             <div class="carousel-dots"></div>
-<br>
         </div>
 
-<br>
+        <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
+            <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+                Rhinestone Shaggy Coat</h2>
+            <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
+                brown / black <br>
+                ￥12,100 (tax in)<br><br>
+                ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
+                立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
+                360度どこから見ても表情のあるデザインに仕上げました。<br>
+                程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
+        </div>
 
-<div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-    <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
-        Rhinestone Shaggy Coat</h2>
-    <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
-        brown / black <br>
-        ￥12,100 (tax in)<br><br>
-        ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
-        立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
-        360度どこから見ても表情のあるデザインに仕上げました。<br>
-        程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
-</div>
-
-<!-- 03 --> 
-
-<!-- 04 -->       
-        <div class="fade-wrapper">
-                <img src="Elishe_LP_261022_11-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_11-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_11-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            </div>
-
-<br><br>
+        <!-- 04 -->
+        <div class="fade-wrapper" style="margin-bottom: 40px;">
+            <img src="Elishe_LP_261022_11-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_11-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_11-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+        </div>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
@@ -311,35 +313,27 @@ Where winter sparkles meet elegant silhouettes.</p>
                 <img src="Elishe_LP_261022_12-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_12-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
             </div>
-<br>
             <div class="carousel-dots"></div>
-<br>
         </div>
 
-<br>
+        <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
+            <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+                Long-sleeve Draped Onepiece</h2>
+            <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
+                brown / black / beige <br>
+                ￥8,910 (tax in)<br><br>
+                ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
+                立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
+                360度どこから見ても表情のあるデザインに仕上げました。<br>
+                程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
+        </div>
 
-<div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-    <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
-        Long-sleeve Draped Onepiece</h2>
-    <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
-        brown / black / beige <br>
-        ￥8,910 (tax in)<br><br>
-        ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
-        立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
-        360度どこから見ても表情のあるデザインに仕上げました。<br>
-        程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
-</div>
-
-<!-- 04 --> 
-
-<!-- 05 -->       
-        <div class="fade-wrapper">
-                <img src="Elishe_LP_261022_13-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_13-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_13-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            </div>
-
-<br><br>
+        <!-- 05 -->
+        <div class="fade-wrapper" style="margin-bottom: 40px;">
+            <img src="Elishe_LP_261022_13-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_13-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_13-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+        </div>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
@@ -347,35 +341,27 @@ Where winter sparkles meet elegant silhouettes.</p>
                 <img src="Elishe_LP_261022_14-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_14-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
             </div>
-<br>
             <div class="carousel-dots"></div>
-<br>
         </div>
 
-<br>
+        <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
+            <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+                Collared Flared Onepiece</h2>
+            <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
+                brown / black / beige <br>
+                ￥8,991 (tax in)<br><br>
+                ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
+                立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
+                360度どこから見ても表情のあるデザインに仕上げました。<br>
+                程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
+        </div>
 
-<div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-    <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
-        Collared Flared Onepiece</h2>
-    <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
-        brown / black / beige <br>
-        ￥8,991 (tax in)<br><br>
-        ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
-        立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
-        360度どこから見ても表情のあるデザインに仕上げました。<br>
-        程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
-</div>
-
-<!-- 05 --> 
-
-<!-- 06 -->       
-        <div class="fade-wrapper">
-                <img src="Elishe_LP_261022_15-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_15-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_15-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            </div>
-
-<br><br>
+        <!-- 06 -->
+        <div class="fade-wrapper" style="margin-bottom: 40px;">
+            <img src="Elishe_LP_261022_15-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_15-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_15-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+        </div>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
@@ -383,35 +369,27 @@ Where winter sparkles meet elegant silhouettes.</p>
                 <img src="Elishe_LP_261022_16-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_16-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
             </div>
-<br>
             <div class="carousel-dots"></div>
-<br>
         </div>
 
-<br>
+        <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
+            <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+                Draped Skirt</h2>
+            <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
+                gray / black / beige <br>
+                ￥6,600 (tax in)<br><br>
+                ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
+                立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
+                360度どこから見ても表情のあるデザインに仕上げました。<br>
+                程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
+        </div>
 
-<div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-    <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
-        Draped Skirt</h2>
-    <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
-        gray / black / beige <br>
-        ￥6,600 (tax in)<br><br>
-        ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
-        立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
-        360度どこから見ても表情のあるデザインに仕上げました。<br>
-        程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
-</div>
-
-<!-- 06 --> 
-
-<!-- 07 -->       
-        <div class="fade-wrapper">
-                <img src="Elishe_LP_261022_17-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_17-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_17-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            </div>
-
-<br><br>
+        <!-- 07 -->
+        <div class="fade-wrapper" style="margin-bottom: 40px;">
+            <img src="Elishe_LP_261022_17-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_17-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_17-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+        </div>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
@@ -419,131 +397,99 @@ Where winter sparkles meet elegant silhouettes.</p>
                 <img src="Elishe_LP_261022_18-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_18-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
             </div>
-<br>
             <div class="carousel-dots"></div>
-<br>
         </div>
 
-<br>
+        <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
+            <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+                Lace-hem Flared Skirt</h2>
+            <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
+                gray / black / beige <br>
+                ￥8,800 (tax in)<br><br>
+                ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
+                立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
+                360度どこから見ても表情のあるデザインに仕上げました。<br>
+                程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
+        </div>
 
-<div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-    <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
-        Lace-hem Flared Skirt</h2>
-    <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
-        gray / black / beige <br>
-        ￥8,800 (tax in)<br><br>
-        ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
-        立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
-        360度どこから見ても表情のあるデザインに仕上げました。<br>
-        程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
-</div>
-
-<!-- 07 --> 
-
-<!-- 08 -->       
-        <div class="fade-wrapper">
-                <img src="Elishe_LP_261022_19-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_19-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_19-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            </div>
-
-<br><br>
+        <!-- 08 -->
+        <div class="fade-wrapper" style="margin-bottom: 40px;">
+            <img src="Elishe_LP_261022_19-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_19-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_19-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+        </div>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
                 <img src="Elishe_LP_261022_20-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_20-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
             </div>
-<br>
             <div class="carousel-dots"></div>
-<br>
         </div>
 
-<br>
+        <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
+            <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+                2way Faux Leather Bag</h2>
+            <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
+                ivory / black <br>
+                ￥8,800 (tax in)<br><br>
+                ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
+                立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
+                360度どこから見ても表情のあるデザインに仕上げました。<br>
+                程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
+        </div>
 
-<div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-    <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
-        2way Faux Leather Bag</h2>
-    <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
-        ivory / black <br>
-        ￥8,800 (tax in)<br><br>
-        ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
-        立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
-        360度どこから見ても表情のあるデザインに仕上げました。<br>
-        程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
-</div>
-
-<!-- 08 -->
-
-<!-- 09 -->       
-        <div class="fade-wrapper">
-                <img src="Elishe_LP_261022_21-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_21-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_21-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            </div>
-
-<br><br>
+        <!-- 09 -->
+        <div class="fade-wrapper" style="margin-bottom: 40px;">
+            <img src="Elishe_LP_261022_21-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_21-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_21-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+        </div>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
                 <img src="Elishe_LP_261022_22-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_22-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
             </div>
-<br>
             <div class="carousel-dots"></div>
-<br>
         </div>
 
-<br>
+        <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
+            <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+                Square-toe Ankle Boots</h2>
+            <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
+                ivory / black <br>
+                ￥9,900 (tax in)<br><br>
+                ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
+                立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
+                360度どこから見ても表情のあるデザインに仕上げました。<br>
+                程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
+        </div>
 
-<div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-    <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
-        Square-toe Ankle Boots</h2>
-    <p style="font-family: 'Marcellus', serif; font-size: 7px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
-        ivory / black <br>
-        ￥9,900 (tax in)<br><br>
-        ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
-        立体的に重なり合う生地が奥行きのあるシルエットを生み出し、<br>
-        360度どこから見ても表情のあるデザインに仕上げました。<br>
-        程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
-</div>
+        <div style="border-top: 1px solid #33210a; border-bottom: 1px solid #33210a; text-align: center; padding: 8px 0; margin: 25px 0;">
+            <span style="font-family: 'Marcellus', serif; font-size: 14px; color: #33210a; letter-spacing: 0.1em;">SCHEDULE</span>
+        </div>
 
-<!-- 09 -->
+        <div style="text-align: center; margin: 50px 0; padding: 0 20px;">
+            <h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+            ZOZOTOWN<br>2026.10.22(thu) 12:00~<br>new release</h2>
+        </div>
 
+        <div style="text-align: center; margin: 50px 0;">
+            <a href="https://zozo.jp/women-brand/elishe/" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 80px; height: 80px; border: 1px solid #999999; border-radius: 50%; margin: 0 auto; text-decoration: none; color: #666666; font-family: 'Marcellus', serif; font-size: 10px; letter-spacing: 0.05em; line-height: 1.4; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">
+                <span>Elishe</span>
+                <span>ONLINE</span>
+                <span>Check</span>
+            </a>
+        </div>
 
-
-
-
-<div style="border-top: 1px solid #33210a; border-bottom: 1px solid #33210a; text-align: center; padding: 8px 0; margin: 25px 0;">
-    <span style="font-family: 'Marcellus', serif; font-size: 14px; color: #33210a; letter-spacing: 0.1em;">SCHEDULE</span>
-</div>
-
-<div style="text-align: center; margin: 50px 0; padding: 0 20px;">
-<h2 style="font-family: 'Marcellus', serif; font-size: 16px; color: #33210a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
-ZOZOTOWN<br>2026.09.25(fri) 12:00~<br>new release</h2>
-</div>
-
-<div style="text-align: center; margin: 50px 0;">
-    <a href="https://zozo.jp/women-brand/elishe/" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 80px; height: 80px; border: 1px solid #999999; border-radius: 50%; margin: 0 auto; text-decoration: none; color: #666666; font-family: 'Marcellus', serif; font-size: 10px; letter-spacing: 0.05em; line-height: 1.4; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">
-        <span>Elishe</span>
-        <span>ONLINE</span>
-        <span>Check</span>
-    </a>
-</div>
-
-<br>
-<br>
-<br>
-<div style="border-top: 1px solid #33210a; border-bottom: 1px solid #33210a; text-align: center; padding: 8px 0; margin: 25px 0;">
-    <span style="font-family: 'Marcellus', serif; font-size: 14px; color: #33210a; letter-spacing: 0.1em;">ARCHIVE</span>
-</div>
-<br>
-<a href="https://elishe-260911.vercel.app/">
-    <img src="Elishe_LP_261022_vol1.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION" style="width: 33.3%; margin: 0 auto;">
-</a>
-<br>
-<br>
-<br>
+        <div style="border-top: 1px solid #33210a; border-bottom: 1px solid #33210a; text-align: center; padding: 8px 0; margin: 40px 0 25px;">
+            <span style="font-family: 'Marcellus', serif; font-size: 14px; color: #33210a; letter-spacing: 0.1em;">ARCHIVE</span>
+        </div>
+        
+        <a href="https://elishe-260911.vercel.app/" style="display: block; text-align: center; margin-bottom: 60px;">
+            <img src="Elishe_LP_261022_vol1.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION" style="width: 33.3%; margin: 0 auto; display: inline-block;">
+        </a>
 
     </div>
 
@@ -703,19 +649,38 @@ ZOZOTOWN<br>2026.09.25(fri) 12:00~<br>new release</h2>
         });
 
         // ＝＝＝ ここから【ふわっと切り替わる（フェード）】用の処理 ＝＝＝
-document.querySelectorAll('.fade-wrapper').forEach((wrapper, index) => {
-    const images = wrapper.querySelectorAll('img');
-    let currentIndex = 0;
+        document.querySelectorAll('.fade-wrapper').forEach((wrapper, index) => {
+            const images = wrapper.querySelectorAll('img');
+            let currentIndex = 0;
 
-    // index（0, 1, 2...）に応じてスタートを 800ミリ秒（0.8秒）ずつ遅らせる
-    setTimeout(() => {
-        setInterval(() => {
-            images[currentIndex].classList.remove('active');
-            currentIndex = (currentIndex + 1) % images.length;
-            images[currentIndex].classList.add('active');
-        }, 2500); // ここが切り替わりの間隔
-    }, index * 800); 
-});
+            setTimeout(() => {
+                setInterval(() => {
+                    images[currentIndex].classList.remove('active');
+                    currentIndex = (currentIndex + 1) % images.length;
+                    images[currentIndex].classList.add('active');
+                }, 2500); 
+            }, index * 800); 
+        });
+
+        // ＝＝＝ ここから【スクロール連動のテキスト落下】用の処理 ＝＝＝
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -100px 0px', 
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.falling-title').forEach(title => {
+            observer.observe(title);
+        });
     </script>
 </body>
 </html>
