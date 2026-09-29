@@ -183,6 +183,32 @@
                 transform: translateY(0);
             }
         }
+/* ＝＝＝ アーカイブ用の横スクロール ＝＝＝ */
+        .archive-track {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -ms-overflow-style: none; 
+            scrollbar-width: none; 
+            padding: 0 20px 20px; /* 左右の余白と下部の余白 */
+            gap: 15px; /* 画像同士の隙間 */
+            margin-bottom: 40px;
+        }
+        .archive-track::-webkit-scrollbar {
+            display: none;
+        }
+        .archive-track a {
+            flex-shrink: 0;
+            width: 45%; /* スマホで2枚目が少し見えてフリックを促す幅 */
+            scroll-snap-align: start;
+            text-decoration: none;
+        }
+        .archive-track a img {
+            width: 100%;
+            height: auto;
+            pointer-events: auto !important; /* リンクとしてタップできるようにする */
+        }
+
     </style>
 </head>
 <body>
@@ -527,6 +553,9 @@
         
         <a href="https://elishe-260911.vercel.app/" style="display: block; text-align: center; margin-bottom: 60px;">
             <img src="Elishe_LP_261022_vol1.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION" style="width: 33.3%; margin: 0 auto; display: inline-block;">
+        </a>
+        <a href="https://elishe-260924.vercel.app/" style="display: block; text-align: center; margin-bottom: 60px;">
+            <img src="Elishe_LP_261022_vol.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION" style="width: 33.3%; margin: 0 auto; display: inline-block;">
         </a>
 
     </div>
