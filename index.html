@@ -8,9 +8,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Cormorant Garamondに変更 -->
+    <!-- Cormorant Garamond -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <!-- 筆記体フォント (変更なし) -->
+    <!-- 筆記体フォント -->
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
 
     <style>
@@ -37,7 +37,12 @@
             pointer-events: none;
         }
 
-        /* ＝＝＝ ここから【トップ画像1回きりフェード】用のスタイル ＝＝＝ */
+        /* カルーセル内の画像はドラッグ操作を受け付けるようにする */
+        .carousel-track img {
+            pointer-events: auto !important;
+        }
+
+        /* ＝＝＝ トップ画像フェード ＝＝＝ */
         .hero-wrapper {
             position: relative;
             width: 100%;
@@ -62,7 +67,7 @@
             opacity: 1; 
         }
 
-        /* ＝＝＝ ここからスライド（カルーセル）用のスタイル ＝＝＝ */
+        /* ＝＝＝ スライド（カルーセル） ＝＝＝ */
         .carousel-wrapper {
             position: relative;
             width: 100%;
@@ -117,7 +122,7 @@
             background-color: #666666;
         }
 
-        /* ＝＝＝ ここから【ふわっと切り替わる（フェード）】用のスタイル ＝＝＝ */
+        /* ＝＝＝ ふわっと切り替わる（フェード） ＝＝＝ */
         .fade-wrapper {
             position: relative;
             width: 100%;
@@ -142,7 +147,7 @@
             z-index: 2;
         }
 
-        /* ＝＝＝ ここから【降ってくるテキスト】用のスタイル ＝＝＝ */
+        /* ＝＝＝ 降ってくるテキスト ＝＝＝ */
         .section-container {
             position: relative;
             width: 100%;
@@ -152,7 +157,7 @@
             position: absolute;
             top: 85%; 
             left: 20px;
-            font-family: 'Pinyon Script', cursive; /* 変更なし */
+            font-family: 'Pinyon Script', cursive;
             font-size: 50px; 
             color: #4a4a4a; 
             z-index: 10;
@@ -180,11 +185,6 @@
 </head>
 <body>
 
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P4GLB94H"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
     <div class="lp-container">
         <!-- トップ画像フェード用コンテナ -->
         <div class="hero-wrapper">
@@ -199,15 +199,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <!-- 01 -->
-            <div class="fade-wrapper">
-                <img src="Elishe_LP_261022_02-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_02-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_02-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_02-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            </div>
+        <div class="fade-wrapper">
+            <img src="Elishe_LP_261022_02-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_02-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_02-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_02-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+        </div>
 
         <div class="section-container">
-            <!-- 降ってくるテキスト（変更なし） -->
             <div class="falling-title">01. Coat</div>
 
             <div class="fade-wrapper" style="margin-bottom: 40px;">
@@ -215,7 +214,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <img src="Elishe_LP_261022_03-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_03-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
             </div>
-
         </div>
 
         <div class="carousel-wrapper">
@@ -230,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="text-align: center; margin: 30px 0; padding: 0 20px;">
             <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
                 2way Standcollar Coat</h2>
-            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; argin: 0;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 black / brown / orange / gray <br>
                 ￥12,100 (tax in)<br><br>
                 ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
@@ -267,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
             <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
                 Flowertulle Peplum Knittops</h2>
-            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; argin: 0;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 ivory / black / lavender / pink <br>
                 ￥5,940 (tax in)<br><br>
                 ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
@@ -300,7 +298,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
             <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
                 Rhinestone Shaggy Coat</h2>
-            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; argin: 0;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 brown / black <br>
                 ￥12,100 (tax in)<br><br>
                 ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
@@ -328,7 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
             <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
                 Long-sleeve Draped Onepiece</h2>
-            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; argin: 0;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 brown / black / beige <br>
                 ￥8,910 (tax in)<br><br>
                 ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
@@ -356,7 +354,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
             <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
                 Collared Flared Onepiece</h2>
-            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; argin: 0;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 brown / black / beige <br>
                 ￥8,991 (tax in)<br><br>
                 ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
@@ -384,7 +382,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
             <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
                 Draped Skirt</h2>
-            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; argin: 0;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 gray / black / beige <br>
                 ￥6,600 (tax in)<br><br>
                 ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
@@ -412,7 +410,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
             <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
                 Lace-hem Flared Skirt</h2>
-            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; argin: 0;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 gray / black / beige <br>
                 ￥8,800 (tax in)<br><br>
                 ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
@@ -439,7 +437,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
             <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
                 2way Faux Leather Bag</h2>
-            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; argin: 0;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 ivory / black <br>
                 ￥8,800 (tax in)<br><br>
                 ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
@@ -466,7 +464,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
             <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
                 Square-toe Ankle Boots</h2>
-            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; argin: 0;">
+            <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 ivory / black <br>
                 ￥9,900 (tax in)<br><br>
                 ランダムに施したタックデザインが目を惹く、存在感のあるロングスカート。<br>
@@ -475,13 +473,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 程よくボリュームのあるシルエットながら、落ち着いた印象を与え上品に着こなせます。<br></p>
         </div>
 
-<br>
-
+        <div style="border-top: 1px solid #33210a; border-bottom: 1px solid #33210a; text-align: center; padding: 8px 0; margin: 25px 0;">
             <span style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #4a4a4a; letter-spacing: 0.1em;">SCHEDULE</span>
-
+        </div>
 
         <div style="text-align: center; margin: 50px 0; padding: 0 20px;">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
             ZOZOTOWN<br>2026.10.22(thu) 12:00~<br>new release</h2>
         </div>
 
@@ -504,9 +501,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <script>
-        // ＝＝＝ ここから【ページ表示時のアニメーション】用の処理 ＝＝＝
+        // ページ表示時のアニメーション
         window.addEventListener('load', () => {
-            // ① トップ画像のフェードイン（1.5秒後）
             setTimeout(() => {
                 const heroImg = document.querySelector('.hero-second-img');
                 if (heroImg) {
@@ -514,7 +510,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }
             }, 1500); 
 
-            // 【追加】② テキスト（Éclat d'Hiver等）のフェードイン（表示タイミング）
             setTimeout(() => {
                 document.querySelectorAll('.hero-second-text').forEach(text => {
                     text.classList.add('show');
@@ -522,7 +517,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }, 1000); 
         });
 
-        // ③ テキスト落下（スクロールして「画面に入った瞬間」に発火させる）
+        // テキスト落下アニメーション
         const observerOptions = {
             root: null,
             rootMargin: '0px 0px -100px 0px', 
@@ -542,7 +537,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             observer.observe(title);
         });
 
-        // ＝＝＝ 横スライド（カルーセル）用の処理 ＝＝＝
+        // 横スライド（カルーセル）用の処理（ドラッグ＆スワイプ対応・自動再生あり）
         document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
             const track = wrapper.querySelector('.carousel-track');
             const images = Array.from(track.children);
@@ -696,7 +691,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             startAutoSlide();
         });
 
-        // ＝＝＝ ここから【ふわっと切り替わる（フェード）】用の処理 ＝＝＝
+        // ふわっと切り替わる（フェード）用の処理
         document.querySelectorAll('.fade-wrapper').forEach((wrapper, index) => {
             const images = wrapper.querySelectorAll('img');
             let currentIndex = 0;
@@ -709,7 +704,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }, 2500); 
             }, index * 800); 
         });
-
     </script>
 </body>
 </html>
