@@ -73,6 +73,18 @@
             opacity: 1; /* クラスが付与されたら表示 */
         }
 
+        .hero-second-text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0; 
+            transition: opacity 0.5s ease-in-out; 
+            z-index: 2;
+        }
+        .hero-second-text.show {
+            opacity: 0.5; /* クラスが付与されたら表示 */
+        }
+
         /* ＝＝＝ ここからスライド（カルーセル）用のスタイル ＝＝＝ */
         .carousel-wrapper {
             position: relative;
@@ -204,10 +216,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-            <h2 style="font-family: 'Marcellus', serif; font-size: 20px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+        <div class="hero-wrapper">
+            <h2 style="font-family: 'Marcellus', serif; font-size: 20px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;" class="hero-second-text">
                 Éclat d'Hiver</h2>
-            <p style="font-family: 'Marcellus', serif; font-size: 10px; color: #666666; line-height: 1.5; letter-spacing: 0.05em; margin: 0;">
+            <p style="font-family: 'Marcellus', serif; font-size: 10px; color: #666666; line-height: 1.5; letter-spacing: 0.05em; margin: 0;" class="hero-second-text">
             Where winter sparkles meet elegant silhouettes.</p>
+        </div>
         </div>
 
         <!-- 01 -->
