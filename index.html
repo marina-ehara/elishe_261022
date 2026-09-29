@@ -26,7 +26,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">
-    <!-- 追加: 筆記体フォント -->
+    <!-- 筆記体フォント -->
     <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
 
     <style>
@@ -53,7 +53,24 @@
             margin: 0;
             padding: 0;
             border: none;
-            pointer-events: none; /* ドラッグ時の画像ゴーストを防ぐ */
+            pointer-events: none;
+        }
+
+        /* ＝＝＝ ここから【トップ画像1回きりフェード】用のスタイル ＝＝＝ */
+        .hero-wrapper {
+            position: relative;
+            width: 100%;
+        }
+        .hero-second-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0; /* 最初は透明 */
+            transition: opacity 2s ease-in-out; /* 2秒かけてゆっくりフェード */
+            z-index: 2;
+        }
+        .hero-second-img.show {
+            opacity: 1; /* クラスが付与されたら表示 */
         }
 
         /* ＝＝＝ ここからスライド（カルーセル）用のスタイル ＝＝＝ */
@@ -144,14 +161,14 @@
         
         .falling-title {
             position: absolute;
-            top: 90%; 
+            top: 80%; 
             left: 20px;
             font-family: 'Pinyon Script', cursive;
             font-size: 50px; 
             color: #4a4a4a; 
             z-index: 10;
             opacity: 0;
-            transform: translateY(-150px);
+            transform: translateY(-300px);
             pointer-events: none;
             line-height: 1;
         }
@@ -163,7 +180,7 @@
         @keyframes slideDownFade {
             0% {
                 opacity: 0;
-                transform: translateY(-300px);
+                transform: translateY(-500px);
             }
             100% {
                 opacity: 1;
@@ -180,7 +197,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
     <div class="lp-container">
-        <img src="Elishe_LP_261022_01.jpg" alt="Elishe 2026AW COLLECTION vol.01">
+        <!-- トップ画像フェード用コンテナ -->
+        <div class="hero-wrapper">
+            <img src="Elishe_LP_261022_01.jpg" alt="Elishe 2026AW COLLECTION">
+            <!-- 上に重なる2枚目の画像（最初は透明） -->
+            <img src="Elishe_LP_261022_01-02.jpg" alt="Elishe 2026AW COLLECTION" class="hero-second-img">
+        </div>
         
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
             <h2 style="font-family: 'Marcellus', serif; font-size: 20px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
@@ -190,8 +212,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <!-- 01 -->
-
-            
             <div class="fade-wrapper">
                 <img src="Elishe_LP_261022_02-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
                 <img src="Elishe_LP_261022_02-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
@@ -203,11 +223,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <!-- 降ってくるテキスト -->
             <div class="falling-title">01. Coat</div>
 
-        <div class="fade-wrapper" style="margin-bottom: 40px;">
-            <img src="Elishe_LP_261022_03-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_03-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_03-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-        </div>
+            <div class="fade-wrapper" style="margin-bottom: 40px;">
+                <img src="Elishe_LP_261022_03-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_03-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_03-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            </div>
 
         </div>
 
@@ -497,6 +517,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <script>
+        // ＝＝＝ ここから【トップ画像1回きりフェード】用の処理 ＝＝＝
+        window.addEventListener('load', () => {
+            // ページ読み込み完了の 1.5秒後 にフェードを実行する
+            setTimeout(() => {
+                const heroImg = document.querySelector('.hero-second-img');
+                if (heroImg) {
+                    heroImg.classList.add('show');
+                }
+            }, 1500); 
+        });
+
         // ＝＝＝ 横スライド（カルーセル）用の処理 ＝＝＝
         document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
             const track = wrapper.querySelector('.carousel-track');
