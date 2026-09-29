@@ -10,8 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Cormorant Garamond -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-    <!-- 筆記体フォント -->
-    <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap" rel="stylesheet">
+    <!-- Kapakana（追加） -->
+    <link href="https://fonts.googleapis.com/css2?family=Kapakana&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -35,11 +35,6 @@
             padding: 0;
             border: none;
             pointer-events: none;
-        }
-
-        /* カルーセル内の画像はドラッグ操作を受け付けるようにする */
-        .carousel-track img {
-            pointer-events: auto !important;
         }
 
         /* ＝＝＝ トップ画像フェード ＝＝＝ */
@@ -67,13 +62,12 @@
             opacity: 1; 
         }
 
-        /* ＝＝＝ スライド（カルーセル） ＝＝＝ */
+        /* ＝＝＝ スライド（カルーセル・ネイティブフリック用） ＝＝＝ */
         .carousel-wrapper {
             position: relative;
             width: 100%;
             padding-bottom: 30px;
             margin-bottom: 20px;
-            overflow: hidden;
             background-color: #ffffff;
         }
         
@@ -84,20 +78,22 @@
         .carousel-track {
             display: flex;
             width: 100%;
-            cursor: grab;
-            touch-action: pan-y; 
+            overflow-x: auto; /* 横スクロールを許可 */
+            scroll-snap-type: x mandatory; /* ピタッと止まるスナップ効果 */
+            -ms-overflow-style: none; 
+            scrollbar-width: none; 
         }
         
-        .carousel-track:active {
-            cursor: grabbing;
+        .carousel-track::-webkit-scrollbar {
+            display: none;
         }
         
         .carousel-track img {
-            min-width: 100%;
+            width: 100%; /* 1枚の画像をコンテナ幅に合わせる */
             flex-shrink: 0;
-            user-select: none;
-            -webkit-user-drag: none;
-            -webkit-user-select: none;
+            scroll-snap-align: start; /* 画像の左端でピタッと止まる */
+            -webkit-user-drag: none; 
+            pointer-events: auto !important; /* フリック操作を受け付ける */
         }
         
         /* ドットナビゲーション */
@@ -157,8 +153,8 @@
             position: absolute;
             top: 85%; 
             left: 20px;
-            font-family: 'Kapakana', cursive;
-            font-size: 50px; 
+            font-family: 'Kapakana', cursive; /* 指定フォントに変更 */
+            font-size: 55px; /* 筆記体に合わせて少し大きめに調整 */
             color: #4a4a4a; 
             z-index: 10;
             opacity: 0;
@@ -193,7 +189,7 @@
         </div>
         
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;" class="hero-second-text">Éclat d'Hiver</h2>
+            <h2 style="font-family: 'Kapakana', cursive; font-size: 40px; color: #4a4a4a; font-weight: normal; margin: 0 0 10px 0; letter-spacing: 0.05em;" class="hero-second-text">Éclat d'Hiver</h2>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 12px; color: #666666; line-height: 1.5; letter-spacing: 0.05em; margin: 0;" class="hero-second-text">
             Where winter sparkles meet elegant silhouettes.</p>
         </div>
@@ -226,7 +222,7 @@
         </div>
 
         <div style="text-align: center; margin: 30px 0; padding: 0 20px;">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+            <h2 style="font-family: 'Kapakana', cursive; font-size: 32px; color: #4a4a4a; font-weight: normal; margin: 0 0 10px 0; letter-spacing: 0.05em;">
                 2way Standcollar Coat</h2>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 black / brown / orange / gray <br>
@@ -267,7 +263,7 @@
         </div>
 
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+            <h2 style="font-family: 'Kapakana', cursive; font-size: 32px; color: #4a4a4a; font-weight: normal; margin: 0 0 10px 0; letter-spacing: 0.05em;">
                 Flowertulle Peplum Knittops</h2>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 ivory / black / lavender / pink <br>
@@ -279,7 +275,6 @@
         </div>
 
         <!-- 03 -->
-
         <div class="section-container">
             <div class="falling-title">03. Coat</div>
         <div class="fade-wrapper">
@@ -304,7 +299,7 @@
         </div>
 
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+            <h2 style="font-family: 'Kapakana', cursive; font-size: 32px; color: #4a4a4a; font-weight: normal; margin: 0 0 10px 0; letter-spacing: 0.05em;">
                 Rhinestone Shaggy Coat</h2>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 brown / black <br>
@@ -318,7 +313,6 @@
         <!-- 04 -->
         <div class="section-container">
             <div class="falling-title">04. Onepiece</div>
-
         <div class="fade-wrapper" style="margin-bottom: 40px;">
             <img src="Elishe_LP_261022_11-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
             <img src="Elishe_LP_261022_11-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
@@ -336,7 +330,7 @@
         </div>
 
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+            <h2 style="font-family: 'Kapakana', cursive; font-size: 32px; color: #4a4a4a; font-weight: normal; margin: 0 0 10px 0; letter-spacing: 0.05em;">
                 Long-sleeve Draped Onepiece</h2>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 brown / black / beige <br>
@@ -367,7 +361,7 @@
         </div>
 
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+            <h2 style="font-family: 'Kapakana', cursive; font-size: 32px; color: #4a4a4a; font-weight: normal; margin: 0 0 10px 0; letter-spacing: 0.05em;">
                 Collared Flared Onepiece</h2>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 brown / black / beige <br>
@@ -398,7 +392,7 @@
         </div>
 
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+            <h2 style="font-family: 'Kapakana', cursive; font-size: 32px; color: #4a4a4a; font-weight: normal; margin: 0 0 10px 0; letter-spacing: 0.05em;">
                 Draped Skirt</h2>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 gray / black / beige <br>
@@ -429,7 +423,7 @@
         </div>
 
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+            <h2 style="font-family: 'Kapakana', cursive; font-size: 32px; color: #4a4a4a; font-weight: normal; margin: 0 0 10px 0; letter-spacing: 0.05em;">
                 Lace-hem Flared Skirt</h2>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 gray / black / beige <br>
@@ -459,7 +453,7 @@
         </div>
 
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+            <h2 style="font-family: 'Kapakana', cursive; font-size: 32px; color: #4a4a4a; font-weight: normal; margin: 0 0 10px 0; letter-spacing: 0.05em;">
                 2way Faux Leather Bag</h2>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 ivory / black <br>
@@ -489,7 +483,7 @@
         </div>
 
         <div style="text-align: center; margin: 60px 0; padding: 0 20px;">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">
+            <h2 style="font-family: 'Kapakana', cursive; font-size: 32px; color: #4a4a4a; font-weight: normal; margin: 0 0 10px 0; letter-spacing: 0.05em;">
                 Square-toe Ankle Boots</h2>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 ivory / black <br>
@@ -528,7 +522,7 @@
     </div>
 
     <script>
-        // ページ表示時のアニメーション
+        // ＝＝＝ ページ表示時のアニメーション ＝＝＝
         window.addEventListener('load', () => {
             setTimeout(() => {
                 const heroImg = document.querySelector('.hero-second-img');
@@ -544,7 +538,7 @@
             }, 1000); 
         });
 
-        // テキスト落下アニメーション
+        // ＝＝＝ テキスト落下アニメーション ＝＝＝
         const observerOptions = {
             root: null,
             rootMargin: '0px 0px -100px 0px', 
@@ -564,161 +558,67 @@
             observer.observe(title);
         });
 
-        // 横スライド（カルーセル）用の処理（ドラッグ＆スワイプ対応・自動再生あり）
+        // ＝＝＝ スライド（ネイティブスクロール・自動再生あり） ＝＝＝
+        // ※旧ドラッグ用スクリプトを削除し、ネイティブのScrollSnapに完全移行
         document.querySelectorAll('.carousel-wrapper').forEach(wrapper => {
             const track = wrapper.querySelector('.carousel-track');
-            const images = Array.from(track.children);
-            const originalLength = images.length;
+            const images = Array.from(track.querySelectorAll('img'));
             const dotsContainer = wrapper.querySelector('.carousel-dots');
             let dots = [];
 
+            // ドットの生成
             if (dotsContainer) {
-                for (let i = 0; i < originalLength; i++) {
+                images.forEach((_, i) => {
                     const dot = document.createElement('span');
                     dot.classList.add('dot');
                     if (i === 0) dot.classList.add('active'); 
                     
                     dot.addEventListener('click', () => {
-                        currentSlide(i);
+                        track.scrollTo({
+                            left: i * track.clientWidth,
+                            behavior: 'smooth'
+                        });
                     });
                     dotsContainer.appendChild(dot);
-                }
-                dots = Array.from(dotsContainer.children);
+                    dots.push(dot);
+                });
             }
 
-            const firstClone = images[0].cloneNode(true);
-            const lastClone = images[originalLength - 1].cloneNode(true);
-            track.appendChild(firstClone);
-            track.insertBefore(lastClone, images[0]);
-
-            let slideIndex = 1; 
-            let isDragging = false;
-            let startPosX = 0;
-            let startPosY = 0;
-            let autoSlideInterval;
-
-            track.style.transform = `translateX(-${slideIndex * 100}%)`;
-
-            function updateSlide() {
-                track.style.transition = "transform 0.4s ease-in-out";
-                track.style.transform = `translateX(-${slideIndex * 100}%)`;
-
-                let dotIndex = slideIndex - 1;
-                if (dotIndex === originalLength) dotIndex = 0;
-                if (dotIndex < 0) dotIndex = originalLength - 1;
-                
-                if (dots.length > 0) {
-                    dots.forEach(dot => dot.classList.remove('active'));
-                    if (dots[dotIndex]) {
-                        dots[dotIndex].classList.add('active');
-                    }
-                }
-            }
-
-            function nextSlide() {
-                if (slideIndex >= originalLength + 1) return;
-                slideIndex++;
-                updateSlide();
-            }
-            
-            function prevSlide() {
-                if (slideIndex <= 0) return;
-                slideIndex--;
-                updateSlide();
-            }
-
-            track.addEventListener('transitionend', () => {
-                const currentImage = track.children[slideIndex];
-                if (currentImage === firstClone) {
-                    track.style.transition = "none";
-                    slideIndex = 1;
-                    track.style.transform = `translateX(-${slideIndex * 100}%)`;
-                }
-                if (currentImage === lastClone) {
-                    track.style.transition = "none";
-                    slideIndex = originalLength;
-                    track.style.transform = `translateX(-${slideIndex * 100}%)`;
-                }
+            // フリック（スクロール）位置に応じてドットの色を変更
+            track.addEventListener('scroll', () => {
+                const index = Math.round(track.scrollLeft / track.clientWidth);
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
             });
 
-            track.addEventListener('touchstart', touchStart, { passive: false });
-            track.addEventListener('touchmove', touchMove, { passive: false });
-            track.addEventListener('touchend', touchEnd);
-            
-            track.addEventListener('mousedown', touchStart);
-            track.addEventListener('mousemove', touchMove);
-            track.addEventListener('mouseup', touchEnd);
-            track.addEventListener('mouseleave', touchEnd);
-
-            function touchStart(e) {
-                clearInterval(autoSlideInterval);
-                startPosX = getPositionX(e);
-                startPosY = getPositionY(e);
-                isDragging = true;
-                track.style.transition = "none";
-            }
-
-            function touchMove(e) {
-                if (!isDragging) return;
-                
-                const currentPositionX = getPositionX(e);
-                const currentPositionY = getPositionY(e);
-                const diffX = currentPositionX - startPosX;
-                const diffY = currentPositionY - startPosY;
-
-                if (Math.abs(diffY) > Math.abs(diffX)) {
-                    return;
-                }
-
-                if (e.cancelable) {
-                    e.preventDefault();
-                }
-
-                const slideWidth = track.clientWidth;
-                const movePercent = (diffX / slideWidth) * 100;
-                track.style.transform = `translateX(calc(-${slideIndex * 100}% + ${movePercent}%))`;
-            }
-
-            function touchEnd(e) {
-                if (!isDragging) return;
-                isDragging = false;
-                
-                const endPos = e.type.includes('mouse') ? e.pageX : (e.changedTouches ? e.changedTouches[0].clientX : startPosX);
-                const diff = endPos - startPosX;
-
-                if (diff < -50) {
-                    nextSlide();
-                } else if (diff > 50) {
-                    prevSlide();
-                } else {
-                    updateSlide();
-                }
-                startAutoSlide();
-            }
-
-            function getPositionX(e) {
-                return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
-            }
-            function getPositionY(e) {
-                return e.type.includes('mouse') ? e.pageY : e.touches[0].clientY;
-            }
-
-            function currentSlide(index) {
-                clearInterval(autoSlideInterval);
-                slideIndex = index + 1;
-                updateSlide();
-                startAutoSlide();
-            }
-
+            // 自動スライド
+            let autoSlideInterval;
             function startAutoSlide() {
                 clearInterval(autoSlideInterval);
-                autoSlideInterval = setInterval(nextSlide, 2000); 
+                autoSlideInterval = setInterval(() => {
+                    let index = Math.round(track.scrollLeft / track.clientWidth);
+                    index++;
+                    // 最後まで行ったら最初に戻る
+                    if (index >= images.length) index = 0;
+                    
+                    track.scrollTo({
+                        left: index * track.clientWidth,
+                        behavior: 'smooth'
+                    });
+                }, 3000); 
             }
 
             startAutoSlide();
+
+            // ユーザーがフリックしている時は自動スライドを一時停止
+            track.addEventListener('touchstart', () => clearInterval(autoSlideInterval), { passive: true });
+            track.addEventListener('touchend', startAutoSlide);
+            track.addEventListener('mouseenter', () => clearInterval(autoSlideInterval));
+            track.addEventListener('mouseleave', startAutoSlide);
         });
 
-        // ふわっと切り替わる（フェード）用の処理
+        // ＝＝＝ ふわっと切り替わる（フェード）用の処理 ＝＝＝
         document.querySelectorAll('.fade-wrapper').forEach((wrapper, index) => {
             const images = wrapper.querySelectorAll('img');
             let currentIndex = 0;
@@ -731,6 +631,7 @@
                 }, 2500); 
             }, index * 800); 
         });
+
     </script>
 </body>
 </html>
