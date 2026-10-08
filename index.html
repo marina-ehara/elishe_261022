@@ -5,23 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elishe 2026AW COLLECTION</title>
 
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5VMWBFFN');</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-NJ6WJF7M0E"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-NJ6WJF7M0E');
-</script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-5VMWBFFN');</script>
+    <!-- End Google Tag Manager -->
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,16 +21,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <!-- Parisienne（流れる文字用） -->
     <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
 
-
-
-
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "ytdo8n2gud");
-</script>
+    <!-- Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "ytdo8n2gud");
+    </script>
 
     <style>
         body {
@@ -64,6 +52,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             padding: 0;
             border: none;
             pointer-events: none;
+        }
+
+        /* ＝＝＝ 余白調整用クラス ＝＝＝ */
+        .spacer {
+            height: 80px;
+            width: 100%;
         }
 
         /* ＝＝＝ トップ画像フェード ＝＝＝ */
@@ -182,7 +176,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             position: absolute;
             top: 85%; 
             left: 20px;
-            font-family: 'Parisienne', cursive; /* 指定フォントに変更 */
+            font-family: 'Parisienne', cursive;
             font-size: 40px; 
             color: #4a4a4a; 
             z-index: 10;
@@ -192,7 +186,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             line-height: 1;
         }
 
-        /* --- ここを追加：右寄せ用クラス --- */
         .falling-title.right-align {
             left: auto;
             right: 20px;
@@ -216,46 +209,68 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         /* ＝＝＝ アーカイブ用の横並び（フリックなし） ＝＝＝ */
         .archive-track {
             display: flex;
-            justify-content: center; /* 中央に寄せる */
-            padding: 0 20px 20px; /* 左右の余白と下部の余白 */
-            gap: 15px; /* 画像同士の隙間 */
+            justify-content: center;
+            padding: 0 20px 20px;
+            gap: 15px;
             margin-bottom: 40px;
         }
         .archive-track a {
-            width: 48%; /* 2枚並べてちょうどいいサイズにする */
+            width: 48%;
             text-decoration: none;
         }
         .archive-track a img {
             width: 100%;
             height: auto;
-            pointer-events: auto !important; /* リンクとしてタップできるようにする */
+            pointer-events: auto !important;
         }
 
         /* ＝＝＝ レコメンドの横並び（フリックなし） ＝＝＝ */
         .recommend-track {
             display: flex;
-            justify-content: center; /* 中央に寄せる */
-            padding: 0 20px 20px; /* 左右の余白と下部の余白 */
-            gap: 15px; /* 画像同士の隙間 */
+            justify-content: center;
+            padding: 0 20px 20px;
+            gap: 15px;
             margin-bottom: 20px;
         }
         .recommend-track a {
-            width: 32%; /* 3枚並べてちょうどいいサイズにする */
+            width: 32%;
             text-decoration: none;
         }
         .recommend-track a img {
             width: 100%;
             height: auto;
-            pointer-events: auto !important; /* リンクとしてタップできるようにする */
+            pointer-events: auto !important;
         }
 
+        /* ＝＝＝ ZOZOTOWNボタン ＝＝＝ */
+        .zozo-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #999999;
+            border-radius: 50%;
+            margin: 0 auto;
+            text-decoration: none;
+            color: #666666;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 11px;
+            letter-spacing: 0.05em;
+            line-height: 1.4;
+            transition: opacity 0.3s;
+        }
+        .zozo-btn:hover {
+            opacity: 0.6;
+        }
     </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VMWBFFN"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VMWBFFN"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <div class="lp-container">
         <!-- トップ画像フェード用コンテナ -->
@@ -277,19 +292,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <!-- 01 -->
-
-            <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">01</h2>
+        <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">01</h2>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
-                <img src="Elishe_LP_261022_04-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_04-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_04-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_04-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_04-01.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_04-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_04-03.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_04-04.jpg" alt="Elishe 2026AW COLLECTION">
             </div>
             <div class="carousel-dots"></div>
         </div>
-
 
         <div style="text-align: center; margin: 20px 0 ; padding: 0 20px;">
             <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">2way Standcollar Coat</h2>
@@ -306,39 +319,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="falling-title">01. Coat</div>
 
             <div class="fade-wrapper" style="margin-bottom: 40px;">
-                <img src="Elishe_LP_261022_03-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_03-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_03-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_03-01.jpg" alt="Elishe 2026AW COLLECTION" class="active">
+                <img src="Elishe_LP_261022_03-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_03-03.jpg" alt="Elishe 2026AW COLLECTION">
             </div>
         </div>
 
         <div class="fade-wrapper">
-            <img src="Elishe_LP_261022_02-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_02-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_02-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_02-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_02-01.jpg" alt="Elishe 2026AW COLLECTION" class="active">
+            <img src="Elishe_LP_261022_02-02.jpg" alt="Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_02-03.jpg" alt="Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_02-04.jpg" alt="Elishe 2026AW COLLECTION">
         </div>
-<br>
-<br>
-<br>
-<br>
+        
+        <div class="spacer"></div>
 
         <!-- 02 -->
-
-            <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">02</h2>
+        <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">02</h2>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
-                <img src="Elishe_LP_261022_07-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_07-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_07-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_07-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_07-04.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_07-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_07-03.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_07-01.jpg" alt="Elishe 2026AW COLLECTION">
             </div>
             <div class="carousel-dots"></div>
         </div>
 
         <div style="text-align: center; margin: 20px 0 60px; padding: 0 20px;">
-            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 14px 0; letter-spacing: 0.1em;">Flowertulle Peplum Knitz</h2>
+            <h2 style="font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 14px 0; letter-spacing: 0.1em;">Flowertulle Peplum Knit</h2>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 ivory / black / lavender / pink <br>
                 ￥5,940 (tax in)<br><br>
@@ -351,32 +361,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="section-container">
             <div class="falling-title">02. Knit</div>
 
+            <div class="fade-wrapper" style="margin-bottom: 40px;">
+                <img src="Elishe_LP_261022_05-01.jpg" alt="Elishe 2026AW COLLECTION" class="active">
+                <img src="Elishe_LP_261022_05-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_05-03.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_05-04.jpg" alt="Elishe 2026AW COLLECTION">
+            </div>
+        </div>
+
         <div class="fade-wrapper">
-            <img src="Elishe_LP_261022_05-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_05-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_05-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_05-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_06-01.jpg" alt="Elishe 2026AW COLLECTION" class="active">
+            <img src="Elishe_LP_261022_06-02.jpg" alt="Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_06-03.jpg" alt="Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_06-04.jpg" alt="Elishe 2026AW COLLECTION">
         </div>
-        </div>
-
-        <div class="fade-wrapper" style="margin-bottom: 40px;">
-            <img src="Elishe_LP_261022_06-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_06-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_06-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_06-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-        </div>
-<br>
-<br>
-
+        
+        <div class="spacer"></div>
 
         <!-- 03 -->
-
-            <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">03</h2>
+        <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">03</h2>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
-                <img src="Elishe_LP_261022_10-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_10-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_10-01.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_10-02.jpg" alt="Elishe 2026AW COLLECTION">
             </div>
             <div class="carousel-dots"></div>
         </div>
@@ -386,47 +394,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 brown / black <br>
                 ￥12,100 (tax in)<br><br>
-
         毛足の長いシャギー素材にラインストーンを散りばめた、華やかなロングコート。
          動くたびにさりげなく煌めくディテールが、冬の装いに特別感をもたらします。 <br>
         程よいボリューム感がありながらも、軽やかでさっと羽織れる仕上がり。 <br>
         重たくなりがちな季節のコーディネートを、上品かつドラマチックに彩ります。<br></p>
-
         </div>
 
         <div class="section-container">
             <div class="falling-title">03. Coat</div>   
 
-        <div class="fade-wrapper" style="margin-bottom: 40px;">
-            <img src="Elishe_LP_261022_09-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_09-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_09-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-        </div>
-    </div> 
-<br>
+            <div class="fade-wrapper" style="margin-bottom: 40px;">
+                <img src="Elishe_LP_261022_09-01.jpg" alt="Elishe 2026AW COLLECTION" class="active">
+                <img src="Elishe_LP_261022_09-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_09-03.jpg" alt="Elishe 2026AW COLLECTION">
+            </div>
+        </div> 
 
         <div class="fade-wrapper">
-            <img src="Elishe_LP_261022_08-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_08-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_08-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_08-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_08-01.jpg" alt="Elishe 2026AW COLLECTION" class="active">
+            <img src="Elishe_LP_261022_08-02.jpg" alt="Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_08-03.jpg" alt="Elishe 2026AW COLLECTION">
+            <img src="Elishe_LP_261022_08-04.jpg" alt="Elishe 2026AW COLLECTION">
         </div>
-<br>
-<br>
-<br>
-<br>
-
-
+        
+        <div class="spacer"></div>
 
         <!-- 04 -->
-
-            <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">04</h2>
+        <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">04</h2>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
-                <img src="Elishe_LP_261022_12-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_12-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_12-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_12-01.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_12-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_12-03.jpg" alt="Elishe 2026AW COLLECTION">
             </div>
             <div class="carousel-dots"></div>
         </div>
@@ -437,39 +437,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 brown / black / beige <br>
                 ￥8,910 (tax in)<br><br>
-
                 流れるようなドレープが美しい、洗練された大人のロングワンピース。 <br>
         計算された生地の落ち感が身体のラインをすっきりとしたシルエットに。 <br>
         シンプルでありながら、どこから見ても立体感のあるエレガントなデザイン。 <br>
         一枚でさらりと着るだけで、品格漂う洗練されたスタイリングが完成します。<br></p>
-
         </div>
 
         <div class="section-container">
-            <!-- クラス right-align を追加 -->
             <div class="falling-title right-align">04. Onepiece</div>
-        <div class="fade-wrapper" style="margin-bottom: 40px;">
-            <img src="Elishe_LP_261022_11-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_11-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_11-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_11-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_11-05.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            
+            <div class="fade-wrapper" style="margin-bottom: 40px;">
+                <img src="Elishe_LP_261022_11-01.jpg" alt="Elishe 2026AW COLLECTION" class="active">
+                <img src="Elishe_LP_261022_11-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_11-03.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_11-04.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_11-05.jpg" alt="Elishe 2026AW COLLECTION">
+            </div>
         </div>
-        </div>
-<br>
-<br>
-<br>
-<br>
+        
+        <div class="spacer"></div>
 
         <!-- 05 -->
-
-            <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">05</h2>
+        <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">05</h2>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
-                <img src="Elishe_LP_261022_14-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_14-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_14-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_14-01.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_14-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_14-03.jpg" alt="Elishe 2026AW COLLECTION">
             </div>
             <div class="carousel-dots"></div>
         </div>
@@ -488,28 +483,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="section-container">
             <div class="falling-title">05. Onepiece</div>
-        <div class="fade-wrapper" style="margin-bottom: 40px;">
-            <img src="Elishe_LP_261022_13-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_13-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_13-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_13-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_13-05.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <div class="fade-wrapper" style="margin-bottom: 40px;">
+                <img src="Elishe_LP_261022_13-01.jpg" alt="Elishe 2026AW COLLECTION" class="active">
+                <img src="Elishe_LP_261022_13-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_13-03.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_13-04.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_13-05.jpg" alt="Elishe 2026AW COLLECTION">
+            </div>
         </div>
-        </div>
-<br>
-<br>
-<br>
-
+        
+        <div class="spacer"></div>
 
         <!-- 06 -->
-
-            <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">06</h2>
+        <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">06</h2>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
-                <img src="Elishe_LP_261022_16-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_16-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_16-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_16-01.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_16-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_16-03.jpg" alt="Elishe 2026AW COLLECTION">
             </div>
             <div class="carousel-dots"></div>
         </div>
@@ -524,33 +516,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         優美なフォルムが、秋冬の装いに抜け感と軽やかさをプラスします。 <br>
         腰回りをすっきりと見せつつ、立体的な生地の重なりが女性らしい曲線を強調。 <br>
         シンプルなトップスと合わせるだけで、洗練されたモードな着こなしが叶います。<br></p>
-
         </div>
 
         <div class="section-container">
-            <!-- クラス right-align を追加 -->
             <div class="falling-title right-align">06. Skirt</div>
-        <div class="fade-wrapper" style="margin-bottom: 40px;">
-            <img src="Elishe_LP_261022_15-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_15-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_15-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_15-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <div class="fade-wrapper" style="margin-bottom: 40px;">
+                <img src="Elishe_LP_261022_15-01.jpg" alt="Elishe 2026AW COLLECTION" class="active">
+                <img src="Elishe_LP_261022_15-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_15-03.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_15-04.jpg" alt="Elishe 2026AW COLLECTION">
+            </div>
         </div>
-        </div>
-<br>
-<br>
-<br>
-<br>
+        
+        <div class="spacer"></div>
 
         <!-- 07 -->
-
-            <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">07</h2>
+        <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">07</h2>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
-                <img src="Elishe_LP_261022_18-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_18-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_18-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_18-01.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_18-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_18-03.jpg" alt="Elishe 2026AW COLLECTION">
             </div>
             <div class="carousel-dots"></div>
         </div>
@@ -561,7 +548,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 9px; color: #666666; line-height: 1.8; letter-spacing: 0.05em; margin: 0;">
                 gray / black / beige <br>
                 ￥8,800 (tax in)<br><br>
-
                 裾に施した繊細なレース切り替えが、足元を華やかに彩るフレアスカート。 <br>
         レース部分からふわっと透ける肌感が、重厚感のある冬の装いに軽快さを演出。<br>
         甘さを抑えたシックな色合いで、大人っぽくエレガントに穿きこなせるデザイン。 <br>
@@ -570,25 +556,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="section-container">
             <div class="falling-title">07. Skirt</div>
-        <div class="fade-wrapper" style="margin-bottom: 40px;">
-            <img src="Elishe_LP_261022_17-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_17-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_17-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_17-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <div class="fade-wrapper" style="margin-bottom: 40px;">
+                <img src="Elishe_LP_261022_17-01.jpg" alt="Elishe 2026AW COLLECTION" class="active">
+                <img src="Elishe_LP_261022_17-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_17-03.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_17-04.jpg" alt="Elishe 2026AW COLLECTION">
+            </div>
         </div>
-        </div>
-<br>
-<br>
-<br>
+        
+        <div class="spacer"></div>
 
         <!-- 08 -->
-
-            <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">08</h2><br>
+        <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">08</h2>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
-                <img src="Elishe_LP_261022_20-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_20-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_20-01.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_20-02.jpg" alt="Elishe 2026AW COLLECTION">
             </div>
             <div class="carousel-dots"></div>
         </div>
@@ -607,25 +591,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="section-container">
             <div class="falling-title">08. Bag</div>
-        <div class="fade-wrapper" style="margin-bottom: 40px;">
-            <img src="Elishe_LP_261022_19-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_19-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_19-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <div class="fade-wrapper" style="margin-bottom: 40px;">
+                <img src="Elishe_LP_261022_19-01.jpg" alt="Elishe 2026AW COLLECTION" class="active">
+                <img src="Elishe_LP_261022_19-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_19-03.jpg" alt="Elishe 2026AW COLLECTION">
+            </div>
         </div>
-        </div>
-<br>
-<br>
-<br>
-<br>
+        
+        <div class="spacer"></div>
 
         <!-- 09 -->
-
-            <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">09</h2><br>
+        <h2 style="text-align: center; font-family: 'Cormorant Garamond', serif; font-size: 18px; color: #4a4a4a; font-weight: normal; margin: 0 0 16px 0; letter-spacing: 0.1em;">09</h2>
 
         <div class="carousel-wrapper">
             <div class="carousel-track">
-                <img src="Elishe_LP_261022_22-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-                <img src="Elishe_LP_261022_22-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_22-01.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_22-02.jpg" alt="Elishe 2026AW COLLECTION">
             </div>
             <div class="carousel-dots"></div>
         </div>
@@ -644,18 +625,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <div class="section-container">
             <div class="falling-title right-align">09. Boots</div>
-        <div class="fade-wrapper" style="margin-bottom: 40px;">
-            <img src="Elishe_LP_261022_21-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_21-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
-            <img src="Elishe_LP_261022_21-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            <div class="fade-wrapper" style="margin-bottom: 40px;">
+                <img src="Elishe_LP_261022_21-01.jpg" alt="Elishe 2026AW COLLECTION" class="active">
+                <img src="Elishe_LP_261022_21-02.jpg" alt="Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_21-03.jpg" alt="Elishe 2026AW COLLECTION">
+            </div>
         </div>
-        </div>
-<br>
-
+        
+        <div class="spacer"></div>
 
         <!-- LINEUP end -->
 
-<br>
         <div style="border-top: 1px solid #33210a; border-bottom: 1px solid #33210a; text-align: center; padding: 8px 0; margin: 25px 0;">
             <span style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #4a4a4a; letter-spacing: 0.1em;">SCHEDULE</span>
         </div>
@@ -666,7 +646,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div style="text-align: center; margin: 30px 0;">
-            <a href="https://zozo.jp/women-brand/elishe/" style="display: flex; flex-direction: column; justify-content: center; align-items: center; width: 80px; height: 80px; border: 1px solid #999999; border-radius: 50%; margin: 0 auto; text-decoration: none; color: #666666; font-family: 'Cormorant Garamond', serif; font-size: 11px; letter-spacing: 0.05em; line-height: 1.4; transition: opacity 0.3s;" onmouseover="this.style.opacity='0.6'" onmouseout="this.style.opacity='1'">
+            <a href="https://zozo.jp/women-brand/elishe/" class="zozo-btn">
                 <span>Elishe</span>
                 <span>ONLINE</span>
                 <span>Check</span>
@@ -677,53 +657,49 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div style="border-top: 1px solid #33210a; border-bottom: 1px solid #33210a; text-align: center; padding: 8px 0; margin: 20px 0 20px;">
             <span style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #4a4a4a; letter-spacing: 0.1em;">RECOMMEND ITEM</span>
         </div>
-<br>
+        <br>
 
         <div class="recommend-track">
             <a href="https://zozo.jp/shop/mono-mart/goods/101583667/">
-                <img src="Elishe_LP_261022_rec-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_rec-01.jpg" alt="Elishe 2026AW COLLECTION">
             </a>
             <a href="https://zozo.jp/shop/mono-mart/goods/109721936/?did=175072883&fileid=1470842703">
-                <img src="Elishe_LP_261022_rec-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_rec-02.jpg" alt="Elishe 2026AW COLLECTION">
             </a>
             <a href="https://zozo.jp/shop/mono-mart/goods/110071326/?did=175553921&fileid=1469175174">
-                <img src="Elishe_LP_261022_rec-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_rec-03.jpg" alt="Elishe 2026AW COLLECTION">
             </a>
         </div>
 
         <div class="recommend-track">
             <a href="https://zozo.jp/shop/mono-mart/goods/110596254/?did=176377558">
-                <img src="Elishe_LP_261022_rec-05.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_rec-05.jpg" alt="Elishe 2026AW COLLECTION">
             </a>
             <a href="https://zozo.jp/shop/mono-mart/goods/98112297/?did=158459019">
-                <img src="Elishe_LP_261022_rec-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_rec-04.jpg" alt="Elishe 2026AW COLLECTION">
             </a>
             <a href="https://zozo.jp/shop/mono-mart/goods/101583669/?did=163614949">
-                <img src="Elishe_LP_261022_rec-06.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_rec-06.jpg" alt="Elishe 2026AW COLLECTION">
             </a>
         </div>
-
-    </div>
-
-
-
+        
         <!-- ここからアーカイブ（横並びでフリックなし） -->
         <div style="border-top: 1px solid #33210a; border-bottom: 1px solid #33210a; text-align: center; padding: 8px 0; margin: 40px 0 25px;">
             <span style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #4a4a4a; letter-spacing: 0.1em;">ARCHIVE</span>
         </div>
-<br>
-<br>
+        <br>
         <div class="archive-track">
             <a href="https://elishe-260911.vercel.app/">
-                <img src="Elishe_LP_261022_vol1.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_vol1.jpg" alt="Elishe 2026AW COLLECTION">
             </a>
             <a href="https://elishe-260925.vercel.app/">
-                <img src="Elishe_LP_261022_vol2.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+                <img src="Elishe_LP_261022_vol2.jpg" alt="Elishe 2026AW COLLECTION">
             </a>
         </div>
 
+        <div class="spacer"></div>
 
-<br><br><br><br><br>
+    </div>
 
     <script>
         // ＝＝＝ ページ表示時のアニメーション ＝＝＝
@@ -834,7 +810,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 }, 2500); 
             }, index * 800); 
         });
-
     </script>
 </body>
 </html>
