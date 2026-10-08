@@ -231,6 +231,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             pointer-events: auto !important; /* リンクとしてタップできるようにする */
         }
 
+        /* ＝＝＝ レコメンドの横並び（フリックなし） ＝＝＝ */
+        .recommend-track {
+            display: flex;
+            justify-content: center; /* 中央に寄せる */
+            padding: 0 20px 20px; /* 左右の余白と下部の余白 */
+            gap: 15px; /* 画像同士の隙間 */
+            margin-bottom: 40px;
+        }
+        .recommend-track a {
+            width: 32%; /* 3枚並べてちょうどいいサイズにする */
+            text-decoration: none;
+        }
+        .recommend-track a img {
+            width: 100%;
+            height: auto;
+            pointer-events: auto !important; /* リンクとしてタップできるようにする */
+        }
+
     </style>
 </head>
 <body>
@@ -653,6 +671,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </a>
         </div>
 
+        <!-- ここからレコメンド（横並びでフリックなし） -->
+        <div style="border-top: 1px solid #33210a; border-bottom: 1px solid #33210a; text-align: center; padding: 8px 0; margin: 40px 0 25px;">
+            <span style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #4a4a4a; letter-spacing: 0.1em;">RECOMMEND ITEM</span>
+        </div>
+<br>
+<br>
+<br>
+<br>
+
+        <div class="recommend-track">
+            <a href="https://zozo.jp/shop/mono-mart/goods/101583667/">
+                <img src="Elishe_LP_261022_rec-01.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            </a>
+            <a href="https://zozo.jp/shop/mono-mart/goods/109721936/?did=175072883&fileid=1470842703">
+                <img src="Elishe_LP_261022_rec-02.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            </a>
+            <a href="https://zozo.jp/shop/mono-mart/goods/110071326/?did=175553921&fileid=1469175174">
+                <img src="Elishe_LP_261022_rec-03.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            </a>
+        </div>
+
+        <div class="recommend-track">
+            <a href="https://zozo.jp/shop/mono-mart/goods/98112297/?did=158459019">
+                <img src="Elishe_LP_261022_rec-04.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            </a>
+            <a href="https://zozo.jp/shop/mono-mart/goods/110596254/?did=176377558">
+                <img src="Elishe_LP_261022_rec-05.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            </a>
+            <a href="https://zozo.jp/shop/mono-mart/goods/101583669/?did=163614949">
+                <img src="Elishe_LP_261022_rec-06.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
+            </a>
+        </div>
+
+    </div>
+
+<br><br>
+
+        <!-- ここからアーカイブ（横並びでフリックなし） -->
         <div style="border-top: 1px solid #33210a; border-bottom: 1px solid #33210a; text-align: center; padding: 8px 0; margin: 40px 0 25px;">
             <span style="font-family: 'Cormorant Garamond', serif; font-size: 16px; color: #4a4a4a; letter-spacing: 0.1em;">ARCHIVE</span>
         </div>
@@ -660,7 +716,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <br>
 <br>
 <br>
-        <!-- ここからアーカイブ（横並びでフリックなし） -->
         <div class="archive-track">
             <a href="https://elishe-260911.vercel.app/">
                 <img src="Elishe_LP_261022_vol1.jpg" alt="Elishe エリシェ Elishe 2026AW COLLECTION">
