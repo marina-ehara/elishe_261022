@@ -53,6 +53,32 @@
             border: none;
             pointer-events: none;
         }
+.favorite-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%; /* 横幅を広めにとる */
+        max-width: 320px; /* パソコン等で見た時に広がりすぎないように制限 */
+        margin: 0 auto 40px; /* 画面の中央に配置 */
+        background-color: #888888; /* 画像のピンクの代わりのグレー背景 */
+        color: #ffffff; /* 白文字 */
+        text-decoration: none;
+        font-size: 15px; /* 見やすい太字サイズ */
+        font-weight: bold;
+        padding: 16px 0; /* 上下のふっくら感 */
+        border-radius: 50px; /* 完全な丸み（カプセル型） */
+        transition: all 0.3s ease;
+        letter-spacing: 0.05em;
+    }
+    
+    .favorite-btn:hover {
+        background-color: #666666; /* マウスオーバーで少し濃いグレーに */
+    }
+    
+    .heart-icon {
+        margin-right: 8px;
+        font-size: 18px; /* ハートを少し大きめに */
+    }
 
         /* ＝＝＝ 余白調整用クラス ＝＝＝ */
         .spacer {
@@ -315,8 +341,8 @@
         ゆったりとした着心地ながらすっきりとした縦のラインで上品にまとまります。<br></p>
         </div>
 
-<a href="https://zozo.jp/upcoming/mono-mart/2253/" target="_blank" rel="noopener noreferrer" class="favorite-btn" style="font-size: 9px;">
-  <span class="heart-icon">♡</span> ZOZOTOWNでお気に入りに追加
+<a href="https://zozo.jp/upcoming/mono-mart/2253/" target="_blank" rel="noopener noreferrer" class="favorite-btn">
+  <span class="heart-icon">♥</span> お気に入りに追加する
 </a>
 
         <div class="section-container">
